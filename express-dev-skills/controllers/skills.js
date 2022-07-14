@@ -5,8 +5,8 @@ module.exports = {
 };
 
 function show(req, res){
-    const skillName = Skill.getOne(req.params.id);
-    res.render('skills/show', { skillName });
+    const skill = Skill.getOne(req.params.id);
+    res.render('skills/show', { skill });
 }
 
 function index(req, res){

@@ -8,15 +8,7 @@
     <title>Skills<title>
 </head>
 <body>
-    <h1>Skills</h1>
-    <ul>
-        <% skills.forEach(function(s) { %>
-            <li>
-           <%= s.id %>
-            -
-            <%= s.skillName %>
-            </li>
-        <%});%>
-    </ul>
+        <h3><%= skill.id %></h3>
+        <h3>Complete: <%= skill.skillName %></h3>
 </body>
 </html>
