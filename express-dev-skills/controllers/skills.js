@@ -28,13 +28,11 @@ function edit(req, res) {
 }
 function update(req, res) {
     Skill.update(req.params.id, req.body);
-    console.log(req.params.id, req.body);
     res.redirect(`/skills/${req.params.id}`);
 }
 function create(req, res) {
- console.log(req.body);
-let newSkill = Skill.create(req.body);
-  res.redirect('/skills');
+ let newId = Skill.create(req.body);
+  res.redirect(`/skills/${newId}`);
 }
 function deleteSkill(req, res) {
    Skill.delete(req.params.id);

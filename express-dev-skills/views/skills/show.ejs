@@ -3,4 +3,9 @@
         <h3>Skill Name: <%= skill.skillName %></h3>
         <h3>Skill Confidence: <%= skill.Confidence %></h3>
         <a href="/skills/<%= skill.id %>/edit"> EDIT SKILL</a>
+        <form action="/skills/<%= skill.id %>?_method=DELETE"
+                method="POST"
+                class="delete-form">
+                <button type="submit">Delete</button>
+              </form>
 <%- include('../partials/footer') %>

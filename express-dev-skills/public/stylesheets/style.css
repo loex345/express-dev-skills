@@ -1,8 +1,19 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica;
+  display: inline-block;
+  background-color:rgb(235, 168, 76) ;
+  color:purple;
 }
 
 a {
-  color: #00B7FF;
+  color: purple;
+}
+
+button {
+  background-color:purple;
+  color:coral
 }

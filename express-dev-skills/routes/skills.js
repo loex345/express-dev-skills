@@ -13,7 +13,7 @@ router.get('/:id/edit', skillsCtrl.edit);
 //Post skill (create functionality)
 router.post('/', skillsCtrl.create);
 //Delete functionality
-router.delete('/:id', skillsCtrl.delete);
+router.delete('/:id', skillsCtrl.delete); //works
 //Put /todos /:id (Update Functionality)
 router.put('/:id', skillsCtrl.update);
 

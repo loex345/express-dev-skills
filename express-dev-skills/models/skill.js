@@ -28,9 +28,10 @@ const skills = [
      return skills.find((skill) => skill.id === id); 
   }
    
-   function create (Skill) {
-    Skill.id = Date.now() % 100000
-    skills.push(Skill);
+   function create (skill) {
+    skill.id = Date.now() % 100000
+    skills.push(skill);
+    return skill.id;
    }
 
    function deleteSkill(id){
