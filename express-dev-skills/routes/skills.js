@@ -12,5 +12,9 @@ router.get('/:id', skillsCtrl.show);
 router.get('/:id/edit', skillsCtrl.edit);
 //Post skill (create functionality)
 router.post('/', skillsCtrl.create);
+//Delete functionality
+router.delete('/:id', skillsCtrl.delete);
+//Put /todos /:id (Update Functionality)
+router.put('/:id', skillsCtrl.update);
 
 module.exports = router;
