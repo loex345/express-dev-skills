@@ -14,7 +14,8 @@ const skills = [
   module.exports = {
     getAll,
     getOne,
-    show
+    show,
+    create
   };
   
   function getAll() {
@@ -28,5 +29,9 @@ const skills = [
   function show (req, res) {
     const skill = Skill.getAll(req.params.id);
     res.render('skills/show', { skillName });
+   }
+   function create (Skill) {
+    Skill.id = Date.now() % 100000
+    skills.push(Skill);
    }
  

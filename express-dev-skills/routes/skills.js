@@ -8,5 +8,9 @@ router.get('/', skillsCtrl.index);
 router.get('/new', skillsCtrl.new);
 //Get /skills show one todd
 router.get('/:id', skillsCtrl.show);
+//Get skills edit Functionlity - show the form to edit the skill
+router.get('/:id/edit', skillsCtrl.edit);
+//Post skill (create functionality)
+router.post('/', skillsCtrl.create);
 
 module.exports = router;

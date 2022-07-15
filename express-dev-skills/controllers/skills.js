@@ -2,7 +2,10 @@ const Skill = require('../models/skill');
 module.exports = {
     show,
     index,
-    new: newSkill
+    new: newSkill,
+    edit,
+    update,
+    create
 };
 
 function show(req, res) {
@@ -17,4 +20,17 @@ function index(req, res) {
 function newSkill(req, res) {
     // render the new.ejs that contains forms
     res.render('skills/new');
+}
+function edit(req, res) {
+    const skill = Skill.getOne(req.params.id);
+    res.render('skills/edit', { skill })
+}
+function update(req, res) {
+    Skill.update(req.params.id, req.body);
+    res.redirect(`/skills/${req.params.id}`);
+}
+function create(req, res) {
+ console.log(req.body);
+let newSkill = Skill.create(req.body);
+  res.redirect('/skills');
 }
